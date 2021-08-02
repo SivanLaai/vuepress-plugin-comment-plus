@@ -1,6 +1,5 @@
 # Vuepress-comment-plugin-plus
 
-[![](https://img.shields.io/badge/online-preview-faad14.svg?style=popout-square)](https://sivanlaai.github.io/)
 [![](https://img.shields.io/npm/dm/vuepress-plugin-comment-plus.svg?style=flat-square)](https://www.npmjs.com/package/vuepress-plugin-comment-plus)
 [![](https://img.shields.io/badge/vuepress-≥v0.9.0-3eaf7c.svg?style=popout-square)](https://vuepress.vuejs.org/)
 ![](https://img.shields.io/badge/license-MIT-blue.svg?style=popout-square)
