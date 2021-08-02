@@ -4,7 +4,8 @@
 [![](https://img.shields.io/npm/dm/vuepress-plugin-comment-plus.svg?style=flat-square)](https://www.npmjs.com/package/vuepress-plugin-comment-plus)
 [![](https://img.shields.io/badge/vuepress-≥v0.9.0-3eaf7c.svg?style=popout-square)](https://vuepress.vuejs.org/)
 ![](https://img.shields.io/badge/license-MIT-blue.svg?style=popout-square)
-![version](https://img.shields.io/github/release/dongyuanxin/vuepress-plugin-comment-plus.svg?style=flat-square)
+![version](https://img.shields.io/github/release/SivanLaai/vuepress-plugin-comment-plus.svg?style=flat-square)
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=SivanLaai/vuepress-plugin-comment-plus)
 
 
 > Support popluar comment plugins in Vuepress, sucn as Waline, Gitalk, Valine, Disqus.
