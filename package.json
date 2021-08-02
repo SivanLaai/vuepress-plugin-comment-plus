@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-comment-plus",
-  "version": "0.7.3",
+  "version": "1.0.1",
   "description": "Comment plugin in vuepress, such as Gitalk, Valine...",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "vue",
     "gitalk",
     "valine",
-    "@waline/client"
+    "waline"
   ],
   "author": "dongyuanxin",
   "license": "MIT",

@@ -1,13 +1,13 @@
 # Vuepress-comment-plugin-plus
 
-[![](https://img.shields.io/badge/online-preview-faad14.svg?style=popout-square)](https://xin-tan.com/)
-[![](https://img.shields.io/npm/dm/vuepress-plugin-comment.svg?style=flat-square)](https://www.npmjs.com/package/vuepress-plugin-comment)
+[![](https://img.shields.io/badge/online-preview-faad14.svg?style=popout-square)](https://sivanlaai.github.io/)
+[![](https://img.shields.io/npm/dm/vuepress-plugin-comment-plus.svg?style=flat-square)](https://www.npmjs.com/package/vuepress-plugin-comment-plus)
 [![](https://img.shields.io/badge/vuepress-≥v0.9.0-3eaf7c.svg?style=popout-square)](https://vuepress.vuejs.org/)
 ![](https://img.shields.io/badge/license-MIT-blue.svg?style=popout-square)
-![version](https://img.shields.io/github/release/dongyuanxin/vuepress-plugin-comment.svg?style=flat-square)
+![version](https://img.shields.io/github/release/dongyuanxin/vuepress-plugin-comment-plus.svg?style=flat-square)
 
 
-> Support popluar comment plugins in Vuepress, sucn as Gitalk, Valine, Disqus.
+> Support popluar comment plugins in Vuepress, sucn as Waline, Gitalk, Valine, Disqus.
 
 - [Features](#features)
 - [Usage](#usage)
@@ -59,7 +59,7 @@ Plugin has registered correct route information in `frontmatter.to` object and `
 
 ### Use in Waline
 
-The `options` is exactly the same as `Valine` configuration.
+The `options` is exactly the same as `Waline` configuration.
 
 ```javascript
 module.exports = {
@@ -136,7 +136,7 @@ module.exports = {
 
 ### Use in Valine
 
-The `options` is exactly the same as `Waline` configuration.
+The `options` is exactly the same as `Valine` configuration.
 
 ```javascript
 module.exports = {
