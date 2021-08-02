@@ -2,7 +2,7 @@ import ejs from 'ejs'
 
 import config from './package.json'
 
-let Gitalk, Valine
+let Gitalk, Valine, Waline
 loadScript(COMMENT_CHOOSEN)
 
 const defaultChoosen = 'comment plugins'
@@ -24,6 +24,9 @@ export function loadScript (name) {
     import('gitalk/dist/gitalk.css')
     .then(() => import('gitalk'))
     .then(pkg => Gitalk = pkg.default)
+  } else if (name === 'waline') {
+    import('@waline/client')
+    .then(pkg => Waline = pkg.default)
   }
 }
 
@@ -50,7 +53,6 @@ export function renderConfig (config, data) {
         result[key] = config[key]
       }
     })
-  
   return result
 }
 
@@ -86,6 +88,27 @@ export const provider = {
       parentDOM.appendChild(commentDOM)
 
       new Valine({
+        ...renderConfig(COMMENT_OPTIONS, { frontmatter }),
+        el: `#${commentDomID}`
+      })
+    },
+    clear (commentDomID) {
+      const last = document.querySelector(`#${commentDomID}`)
+      if (last) {
+        last.remove()
+      }
+      return true
+    }
+  },
+  waline: {
+    render (frontmatter, commentDomID) {
+      const commentDOM = document.createElement('div')
+      commentDOM.id = commentDomID
+
+      const parentDOM = document.querySelector(COMMENT_CONTAINER)
+      parentDOM.appendChild(commentDOM)
+
+      new Waline({
         ...renderConfig(COMMENT_OPTIONS, { frontmatter }),
         el: `#${commentDomID}`
       })

@@ -1,4 +1,4 @@
-# Vuepress-comment-plugin
+# Vuepress-comment-plugin-plus
 
 [![](https://img.shields.io/badge/online-preview-faad14.svg?style=popout-square)](https://xin-tan.com/)
 [![](https://img.shields.io/npm/dm/vuepress-plugin-comment.svg?style=flat-square)](https://www.npmjs.com/package/vuepress-plugin-comment)
@@ -15,12 +15,14 @@
   - [⚠️Route object properties](#⚠️Route-object-properties)
   - [Use with Gitalk](#use-in-gitalk)
   - [Use with Valine](#use-in-valine)
+  - [Use with Waline](#use-in-waline)
   - [Hide comment](#how-to-hide-page-comment)
 - [Options detail](#options-detail)
 - [Todo](#todo)
 
 ## Features
 
+- Support Waline
 - Support Gitalk, Valine
 - Dynamic Import
 - Response router change and refresh automatic
@@ -33,19 +35,19 @@
 With `npm`:
 
 ```bash
-npm install --save vuepress-plugin-comment
+npm install --save vuepress-plugin-comment-plus
 ```
 
 With `yarn`:
 
 ```bash
-yarn add vuepress-plugin-comment -D
+yarn add vuepress-plugin-comment-plus -D
 ```
 
 With `cnpm`:
 
 ```bash
-cnpm i --save vuepress-plugin-comment
+cnpm i --save vuepress-plugin-comment-plus
 ```
 
 
@@ -55,6 +57,30 @@ cnpm i --save vuepress-plugin-comment
 
 Plugin has registered correct route information in `frontmatter.to` object and `frontmatter.from` object. Their properties are the same as [vue-router's route object](https://router.vuejs.org/api/#route-object-properties).
 
+### Use in Waline
+
+The `options` is exactly the same as `Valine` configuration.
+
+```javascript
+module.exports = {
+  plugins: [
+    [
+      'vuepress-plugin-comment-plus',
+      {
+	     choosen: 'waline', 
+         // options选项中的所有参数，会传给Waline的配置
+         options: {
+           el: '#valine-vuepress-comment',
+           serverURL: 'https://waline-api-green.vercel.app',
+	       path: '<%- frontmatter.commentid || frontmatter.permalink %>'
+         }
+      }
+    ]
+  ]
+}
+```
+
+
 ### Use in Gitalk
 
 The `options` is exactly the same as `Gitalk` configuration.
@@ -63,7 +89,7 @@ The `options` is exactly the same as `Gitalk` configuration.
 module.exports = {
   plugins: [
     [
-      'vuepress-plugin-comment',
+      'vuepress-plugin-comment-plus',
       {
         choosen: 'gitalk', 
         options: {
@@ -86,7 +112,7 @@ If you want to access variables, such as `$frontmatter` and `window`, please use
 module.exports = {
   plugins: [
     [
-      'vuepress-plugin-comment',
+      'vuepress-plugin-comment-plus',
       {
         choosen: 'gitalk', 
         options: {
@@ -110,13 +136,13 @@ module.exports = {
 
 ### Use in Valine
 
-The `options` is exactly the same as `Valine` configuration.
+The `options` is exactly the same as `Waline` configuration.
 
 ```javascript
 module.exports = {
   plugins: [
     [
-      'vuepress-plugin-comment',
+      'vuepress-plugin-comment-plus',
       {
         choosen: 'valine', 
         options: {
@@ -136,7 +162,7 @@ If you want to access variables, such as `$frontmatter` and `window`, please use
 module.exports = {
   plugins: [
     [
-      'vuepress-plugin-comment',
+      'vuepress-plugin-comment-plus',
       {
         choosen: 'valine', 
         options: {
@@ -150,6 +176,7 @@ module.exports = {
   ]
 }
 ```
+
 
 ### How to hide page comment
 

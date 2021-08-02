@@ -5,8 +5,6 @@
 <script>
 import {
   provider,
-  renderConfig,
-  loadScript,
 } from './util'
 
 const commentDomID = 'vuepress-plugin-comment' 
@@ -41,16 +39,19 @@ export default {
  * Clear last page comment dom
  */
 function clear (frontmatter) {
+  let el = COMMENT_OPTIONS.el || commentDomID
+  if (el.startsWith('#')) {
+    el = el.slice(1)
+  }
   switch (COMMENT_CHOOSEN) {
     case 'gitalk': 
       return provider.gitalk.clear(commentDomID)
     case 'valine': 
-      let el = COMMENT_OPTIONS.el || commentDomID
-      if (el.startsWith('#')) {
-        el = el.slice(1)
-      }
       console.log(el)
       return provider.valine.clear(el)
+    case 'waline':
+      console.log(el)
+      return provider.waline.clear(el)
     default: return false
   }
 }
@@ -74,15 +75,17 @@ function renderComment (frontmatter) {
     return 
   }
 
+  let el = COMMENT_OPTIONS.el || commentDomID
+  if (el.startsWith('#')) {
+    el = el.slice(1)
+  }
   switch (COMMENT_CHOOSEN) {
     case 'gitalk': 
       return provider.gitalk.render(frontmatter, commentDomID)
     case 'valine': 
-      let el = COMMENT_OPTIONS.el || commentDomID
-      if (el.startsWith('#')) {
-        el = el.slice(1)
-      }
       return provider.valine.render(frontmatter, el)
+    case 'waline': 
+      return provider.waline.render(frontmatter, el)
     default: return false
   }
 }
