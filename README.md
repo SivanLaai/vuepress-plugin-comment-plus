@@ -1,5 +1,7 @@
 # Vuepress-comment-plugin-plus
 
+### 说明文档 - [中文 | [English](./README-en.md)]
+
 [![](https://img.shields.io/npm/dm/vuepress-plugin-comment-plus.svg?style=flat-square)](https://www.npmjs.com/package/vuepress-plugin-comment-plus)
 [![](https://img.shields.io/badge/vuepress-≥v0.9.0-3eaf7c.svg?style=popout-square)](https://vuepress.vuejs.org/)
 ![](https://img.shields.io/badge/license-MIT-blue.svg?style=popout-square)
@@ -9,14 +11,22 @@
 
 > Vuepress评论插件，当前支持Waline（推荐）、Gitalk、Valine
 
-[[toc]]
+- [特征](#特征)
+- [使用](#使用)
+  - [安装](#安装)
+  - [⚠️路由对象属性](#⚠️路由对象属性)
+  - [使用Gitalk](#使用Gitalk)
+  - [使用Valine](#使用Valine)
+  - [使用Waline](#使用Waline)
+  - [隐藏评论栏](#隐藏评论栏)
+- [设置详解](#设置详解)
 
 ## 特征
 
 - 支持Waline
 - 支持Gitalk, Valine
 - 动态导入
-- Response router change and refresh automatic
+- 响应路由改变并自动刷新
 - 用户可以使用文章中的`$frontmatter`
 
 ## 使用

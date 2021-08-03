@@ -1,5 +1,7 @@
 # Vuepress-comment-plugin-plus
 
+### Document - [English | [中文](./README.md)]
+
 [![](https://img.shields.io/npm/dm/vuepress-plugin-comment-plus.svg?style=flat-square)](https://www.npmjs.com/package/vuepress-plugin-comment-plus)
 [![](https://img.shields.io/badge/vuepress-≥v0.9.0-3eaf7c.svg?style=popout-square)](https://vuepress.vuejs.org/)
 ![](https://img.shields.io/badge/license-MIT-blue.svg?style=popout-square)
@@ -9,7 +11,16 @@
 
 > Support popluar comment plugins in Vuepress, sucn as Waline, Gitalk, Valine, Disqus.
 
-[[toc]]
+- [Features](#features)
+- [Usage](#usage)
+  - [Install](#install)
+  - [⚠️Route object properties](#⚠️Route-object-properties)
+  - [Use with Gitalk](#use-in-gitalk)
+  - [Use with Valine](#use-in-valine)
+  - [Use with Waline](#use-in-waline)
+  - [Hide comment](#how-to-hide-page-comment)
+- [Options detail](#options-detail)
+- [Todo](#todo)
 
 ## Features
 
