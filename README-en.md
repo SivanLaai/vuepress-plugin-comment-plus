@@ -11,6 +11,7 @@
 
 > Support popluar comment plugins in Vuepress, sucn as Waline, Gitalk, Valine, Disqus.
 
+- base on [dongyuanxin/vuepress-plugin-comment](https://github.com/dongyuanxin/vuepress-plugin-comment)
 - [Features](#features)
 - [Usage](#usage)
   - [Install](#install)

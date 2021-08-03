@@ -1,7 +1,6 @@
 # Vuepress-comment-plugin-plus
-
 ### 说明文档 - [中文 | [English](./README-en.md)]
-
+### 
 [![](https://img.shields.io/npm/dm/vuepress-plugin-comment-plus.svg?style=flat-square)](https://www.npmjs.com/package/vuepress-plugin-comment-plus)
 [![](https://img.shields.io/badge/vuepress-≥v0.9.0-3eaf7c.svg?style=popout-square)](https://vuepress.vuejs.org/)
 ![](https://img.shields.io/badge/license-MIT-blue.svg?style=popout-square)
@@ -11,6 +10,7 @@
 
 > Vuepress评论插件，当前支持Waline（推荐）、Gitalk、Valine
 
+- 本项目基于[dongyuanxin/vuepress-plugin-comment](https://github.com/dongyuanxin/vuepress-plugin-comment)
 - [特征](#特征)
 - [使用](#使用)
   - [安装](#安装)
